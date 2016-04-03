@@ -1,0 +1,87 @@
+<ion-view view-title="Pizza Customisation">
+  <ion-content class="padding">
+	<div class="row">
+		<!-- Duplicate -->
+		<div id="commande" class="col-20 item">
+			<div class="item item-balanced">
+				<h2>Table numéro {{tableNum}}</h2>
+			</div>
+			<div class="list">
+				<div class="item item-divider">
+					{{name}}
+				</div>
+			</div>
+			<button class="button button-balanced">
+				Valider
+			</button>
+		</div>
+		<div class="col-80 padding">
+			<div class="row">
+				<div class="col-50">
+					<div class="list">
+						<div class="item item-input-inset">
+							<label class="item-input-wrapper">
+								<input type="text" placeholder="Votre Nom">
+							</label>
+							<button class="button button-small">
+								OK
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="row" id="pizzaBase">
+				<div class="col col-10">
+					<h4> Diamètre </h4>
+					<select class="button button-energized" name="Diamètre">
+						<option>Medium</option>
+						<option>Large</option>
+					</select>
+				</div>
+				<div class="col col-10">
+					<h4> Base </h4>
+					<select class="button button-energized" name="Base">
+						<option>Sauce Tomate</option>
+						<option>Crème Fraiche</option>
+					</select>
+				</div>
+				<div class="col col-10">
+					<h4> Pâte </h4>
+					<select class="button button-energized" name="Pâte">
+						<option>Fine</option>
+						<option>Classique</option>
+						<option>Pan</option>
+						<option>Mozza Crust</option>
+					</select>
+				</div>
+				<div class="col col-50">
+					<img ng-src="img/pizzas/{{pizza.img}}">
+				</div>
+			</div>
+			<div class="row">
+				<ion-scroll direction="y" class="available-scroller" style="width: 100%; height: 15vh">
+					<div class="ingredients" collection-repeat="ingredients in pizza.ingredients" item-height="80%" item-width="20%">
+						<h4 ng-if="ingredients.name != ''"> {{ingredients.name}} </h4>
+						<p ng-if="ingredients.name != ''"> {{ingredients.prix}} </p>
+						<h4 ng-if="ingredients.name == ''"> Ajouter Ingrédient</h4>
+						<a ng-if="ingredients.name != ''" class="ion-close-circled" > Supprimer</a>
+						<a ng-if="ingredients.name == ''" class="ion-checkmark-circled" > Ajouter</a>
+					</div>
+				</ion-scroll>
+			</div>
+			<button class="col-25 button button-stable bottomButtonHelp">
+					Appeler le serveur
+			</button>
+			<div id="bottomButtonDiv" class="row">
+				<button ui-sref="pizzas" class="col-25 button button-stable bottomButton">
+					Revenir aux pizzas
+				</button>
+				<button ui-sref="boissons" class="col-25 button button-stable bottomButton">
+					Passer aux boissons
+				</button>
+			</div>
+		</div>
+	</div>
+  </ion-content>
+</ion-view>

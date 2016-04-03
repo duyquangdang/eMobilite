@@ -1,0 +1,42 @@
+<ion-view view-title="Choix de la table">
+  <ion-content class="padding" scroll="false">
+
+  	<h3 class="col-center">Veuillez choisir la table du client: </h3>
+
+	<!-- Code degueulasse -->
+	<div class="row">
+		<ion-scroll direction="y" class="available-scroller" style="width: 100%; height: 70vh">
+			<div class="zones" collection-repeat="zone in zones" item-height="33%" item-width="33%">
+				<h4>{{zone.id}}</h4>
+				<div class="row">
+					<a ng-click="getPizzaMkd({{zone[0].id}}, {{zone[0].num}})" ng-if="zone[0].reservee == '0'" class="col-25 tables free">
+						<p>{{zone[0].num}}</p>
+					</a>
+					<a ng-click="getPizzaMkd({{zone[0].id}}, {{zone[0].num}})" ng-if="zone[0].reservee == '1'" class="col-25 tables notFree">
+							<p>{{zone[0].num}}</p>
+					</a>
+					<a ng-click="getPizzaMkd({{zone[1].id}}, {{zone[1].num}})" ng-if="zone[0].reservee == '0'" class="col-25 tables free">
+						<p>{{zone[1].num}}</p>
+					</a>
+					<a ng-click="getPizzaMkd({{zone[0].id}}, {{zone[0].num}})" ng-if="zone[0].reservee == '1'" class="col-25 tables notFree">
+						<p>{{zone[1].num}}</p>
+					</a>
+					<a ng-click="getPizzaMkd({{zone[2].id}}, {{zone[2].num}})" ng-if="zone[0].reservee == '0'" class="col-25 tables free">
+						<p>{{zone[2].num}}</p>
+					</a>
+					<a ng-click="getPizzaMkd({{zone[0].id}}, {{zone[0].num}})" ng-if="zone[0].reservee == '1'" class="col-25 tables notFree">
+						<p>{{zone[2].num}}</p>
+					</a>
+					<a ng-click="getPizzaMkd({{zone[3].id}}, {{zone[3].num}})" ng-if="zone[0].reservee == '0'" class="col-25 tables free">
+						<p>{{zone[3].num}}</p>
+					</a>
+					<a ng-click="getPizzaMkd({{zone[0].id}}, {{zone[0].num}})" ng-if="zone[0].reservee == '1'" class="col-25 tables notFree">
+						<p>{{zone[3].num}}</p>
+					</a>
+				</div>
+			</div>
+		</ion-scroll>
+	</div>
+	
+  </ion-content>
+</ion-view>

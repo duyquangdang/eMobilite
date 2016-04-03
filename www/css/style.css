@@ -1,0 +1,227 @@
+/* Form Password */
+.error-container {
+  margin: 5px 0;
+}
+ 
+.error-container:last-child {
+    margin: 5px 0 0;
+}
+ 
+.error {
+  padding: 10px 16px;
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #555;
+  vertical-align: middle;
+}
+ 
+.error i {
+  font-size: 24px;
+  color: #B83E2C;  
+  vertical-align: middle;
+}
+ 
+.last-error-container > .error {
+  padding: 10px 16px 0;
+}
+ 
+.has-errors {
+  border-bottom: 3px solid #B83E2C;
+}
+ 
+.no-errors {
+  border-bottom: 3px solid green;
+}
+
+/* nfc */
+dt {
+    float: left;
+    font-weight: normal;
+    margin-right: 0.25em;
+}
+
+dt:after
+{
+    content:": ";
+}
+
+dd {
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+/* scroll */
+.scroll {
+	height:100%;
+}
+
+.row {
+	height:100%;
+}
+
+#commande {
+	border-width:1px;
+}
+
+#commande .list {
+	height:100%;
+}
+
+#commande button {
+	position: absolute;
+    bottom: 10px;
+    width: 90%;
+}
+
+.col-center {
+	text-align:center;
+}
+
+.floatRight {
+	float:right;
+}
+
+.list-inline {
+	display: inline-flex;
+}
+
+.list-inline button, .list-inline select {
+	border-color:#C0C0C0 !important;
+	background-color: #f8f8f8;
+}
+
+/* Pizzas, Boissons */
+.pizza img {
+	width:70%;
+}
+
+.boissons img{
+	width:60%;
+}
+
+.pizza img, .boissons img, .desserts img {
+	height:80%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pizza h4, .boissons h4, .desserts h4 {
+	text-align:center;
+	color:brown;
+}
+
+/* Commandes */
+.commande {
+	padding:10px;
+}
+
+/* Button */
+#bottomButtonDiv {
+	position:absolute;
+	bottom:2%;
+	height:5%;
+	margin-left:25%;
+}
+
+.bottomButton, .bottomButtonCuisine, .bottomButtonHelp {
+	margin-left:10px;
+	margin-right:10px;
+	border-radius:25px;
+	font-size:large;
+}
+
+.bottomButton {
+	border:1px solid #ccc !important;
+	color:blue !important;
+}
+
+.buttonServeur {
+	display:inline-block;
+	float:right;
+}
+
+.bottomButtonHelp {
+	position:absolute;
+	bottom:10px;
+	background-color:#4D8DFB !important;
+}
+
+/*progress time text on middle of circle*/
+
+.progress-wrapper {
+  position: relative;
+  margin: 20px auto;
+  font-size: 21px;
+}
+
+.progress {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  line-height: 9em;
+  font-size: 1em;
+  text-align: center;
+  font-weight: 100;
+}
+
+/* zone */
+.tables {
+	border:1px solid;
+	width:50%;
+	height:50%;
+}
+
+.tables p {
+	padding:50%;
+}
+
+.zones {
+	border:1px solid;
+}
+.zones h4 {
+	text-align:center;
+}
+
+.zones a {
+	color :#000000;
+}
+
+.free {
+	background-color:green;
+}
+
+.notFree {
+	background-color:red;
+}
+
+/* Custom Pizza */
+
+.ingredients {
+	background-color:#C8C4C4;
+	text-align:center;
+	border-radius:25px;
+	border:1px solid;
+}
+
+.ingredients a {
+	position:absolute;
+	bottom:10px;
+}
+
+#pizzaBase img {
+	float:right;
+}
+
+#pizzaBase div {
+	margin:20px;
+	display:inline-table;
+}
+
+#pizzaBase div select {
+	height:20%;
+}

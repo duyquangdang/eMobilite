@@ -1,0 +1,78 @@
+<ion-view view-title="Pizza">
+  <ion-content class="padding">
+	<div class="row">
+		<!-- Duplicate -->
+		<div id="commande" class="col-20 item">
+			<div class="item item-balanced">
+				<h2>Table numéro {{tableNum}}</h2>
+			</div>
+			<div class="list">
+				<div class="item item-divider">
+					{{name}}
+				</div>
+			</div>
+			<button class="button button-balanced">
+				Valider
+			</button>
+		</div>
+		<div class="col-80 padding">
+			<div class="row">
+				<div class="col-50">
+					<div class="list">
+						<div class="item item-input-inset">
+							<label class="item-input-wrapper">
+								<input type="text" placeholder="Votre Nom">
+							</label>
+							<button class="button button-small">
+								OK
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-50 col-center floatRight">
+					<button ng-click="getPizza()" class="button button-energized">
+						Creer votre propre pizza
+					</button>
+				</div>
+			</div>
+			<hr>
+			<div class="row list list-inline">
+				<button class="col-20 button button-assertive">
+					Top 10
+				</button>
+				<button class="col-20 button button-stable">
+					Végétarienne
+				</button>
+				<button class="col-20 button button-stable">
+					Sans gluten
+				</button>
+				<button class="col-20 button button-stable">
+					Toutes
+				</button>
+				<select class="col-20">
+					<option selected>Autre</option>
+					<option>Viande</option>
+					<option>Poisson</option>
+					<option>Fromage</option>
+					<option>Les mieux notees</option>
+					<option>Les sucres sales</option>
+				</select>
+			</div>
+			<ion-scroll direction="y" class="available-scroller" style="width: 100%; height: 70vh">
+				<div class="pizza" collection-repeat="pizza in pizzasMkd" item-height="25%" item-width="25%">
+					<img ng-src="img/pizzas/{{pizza.img}}" ng-click="getPizza(pizza.id)">
+					<h4>{{pizza.name}}</h4>
+				</div>
+			</ion-scroll>
+			<button class="col-25 button button-stable bottomButtonHelp">
+					Appeler le serveur
+			</button>
+			<div id="bottomButtonDiv" class="row">
+				<button ui-sref="boissons" class="col-25 button button-stable bottomButton">
+					Passer aux boissons
+				</button>
+			</div>
+		</div>
+	</div>
+  </ion-content>
+</ion-view>

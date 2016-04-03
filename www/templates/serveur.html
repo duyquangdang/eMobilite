@@ -1,0 +1,39 @@
+<ion-view view-title="Serveur">
+  <ion-content class="padding">
+	<div class="row">
+		<div class="commande" collection-repeat="commande in commandes" item-height="33%" item-width="33%">
+			<div class="card">
+				<div class="item item-divider">
+					<h2 class="text-center"> <b> {{commande.name}} </b> </h2>
+				</div>
+				<div class="row">
+					<div class="col-50 item item-text-wrap">
+						<div style="display:inline-block">
+							<p class="text-center" ng-repeat="content in commande.content track by $index">
+								{{content}}
+							</p>
+						</div>
+						<button class="button button-outline ion-checkmark-circled buttonServeur"/>
+					</div>
+					<div class="col-50 item item-text-wrap">
+						<div style="display:inline-block">
+							<p class="text-center" ng-repeat="add in commande.add track by $index">
+								{{add}}
+							</p>
+						</div>
+						<button class="button button-outline ion-checkmark-circled buttonServeur"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="bottomButtonDiv" class="row">
+			<button class="col-25 button button-assertive bottomButtonCuisine">
+				Annuler
+			</button>
+			<button class="col-25 button button-balanced bottomButtonCuisine">
+				Fait
+			</button>
+		</div>
+	</div>
+  </ion-content>
+</ion-view>

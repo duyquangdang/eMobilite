@@ -1,0 +1,70 @@
+<ion-view view-title="Accueil">
+  <ion-content class="padding">
+  	<h3 class="col-center">Veuillez configurer le mode de la tablette: </h3>
+  	<div class="row">
+	  <div class="col">
+	  	<p><a ui-sref="password" class="button button-block ion-knife" style="background-color:#9CCC65; color:white"> Cuisinier</a></p>
+	  </div>
+	  <div class="col">
+	  	<p><a ui-sref="password" class="button button-block ion-android-walk" style="background-color:#5C6BC0; color:white"> Serveur</a></p>
+	  </div>
+	  <div class="col">
+	  	<p><a class="button button-block ion-android-restaurant" style="background-color:#8D6E63; color:white" ng-click="getTables()"> Client</a></p>
+	  </div>
+	</div>
+
+	<!-- NFC -->
+		<h1 class="title">NFC Reader</h1>
+        <button class="button button-clear button-positive" ng-click="clear()" ng-if="tag.id">Clear</button>
+	<div ng-if="!tag.id">
+            <div class="card">
+                <div class="item item-text-wrap center">
+                    Scan a tag to being.
+                </div>
+            </div>
+        </div>
+        <div ng-if="tag.id">
+            <div class="card">
+                <div class="item item-text-wrap">
+                    <dl>
+                        <dt>Tag Id</dt>
+                        <dd>{{ tag.id | bytesToHexString }}</dd>
+                        <dt>Tag Type</dt>
+                        <dd>{{ tag.type }}</dd>
+                        
+                        <dt>Max Size</dt>
+                        <dd>{{ tag.maxSize }} bytes</dd>
+                        <dt>Is Writable</dt>
+                        <dd>{{ tag.isWritable }}</dd>
+                        <dt>Can Make Read Only</dt>
+                        <dd>{{ tag.canMakeReadOnly }}</dd>
+                    </dl>
+                    <div class="card" ng-repeat="record in tag.ndefMessage">
+                        <div class="item item-divider">
+                            Record {{$index + 1}} <br/>
+                        </div>
+                        <div class="item item-text-wrap">
+                            <dl>
+                                <dt>TNF</dt>
+                                <dd>{{ record.tnf | tnfToString }}</dd>
+                                <dt>Record Type</dt>
+                                <dd>{{ record.type | bytesToString }}</dd>
+                                <dt ng-if="record.id">Record Id</dt>
+                                <dd ng-if="record.id">{{ record.id | bytesToString }}</dd>
+                                <dt>Payload</dt>
+                                <dd>{{ record | decodePayload }}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+	
+	<div class="bar bar-footer">
+  		<div class="title">
+  			Company Mikado's Pizza
+  		</div>
+	</div>
+  </ion-content>
+</ion-view>
