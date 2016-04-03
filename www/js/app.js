@@ -44,21 +44,23 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
 
   // Tables
   $stateProvider.state('tables', {
-    url: '/tables:listTables',
+    url: '/tables',
     templateUrl: 'templates/tables.html',
     controller: 'TablesCtrl'
   })
 
  // Pizzas
   $stateProvider.state('pizzas', {
-    url: '/pizzas/:pizzasMkd:ingredients:tableID:tableNum:commandes',
+    //url: '/pizzas/:pizzasMkd:ingredients:tableID:tableNum:commandes',
+    url: '/pizzas:tableID:tableNum',
     templateUrl: 'templates/pizzas.html',
     controller: 'PizzasCtrl'
   })
 
   // PizzaCustom
   $stateProvider.state('pizzaCustom', {
-    url: '/:pizzasMkd:ingredients:tableID:tableNum:pizzaId/pizzaCustom',
+    //url: '/:pizzasMkd:ingredients:tableID:tableNum:pizzaId/pizzaCustom',
+    url: '/pizzaCustom:tableID:tableNum:pizzaId',
     templateUrl: 'templates/pizzaCustom.html',
     controller: 'PizzaCustomCtrl'
   })
@@ -96,6 +98,20 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     url: '/timer',
     templateUrl: 'templates/timer.html',
     controller: 'TimerCtrl'
+  })
+
+  // Commentaire
+  $stateProvider.state('commentaire', {
+    url: '/commentaire',
+    templateUrl: 'templates/commentaire.html',
+    controller: 'CommentaireCtrl'
+  })
+
+  // Paiement
+  $stateProvider.state('paiement', {
+    url: '/paiement',
+    templateUrl: 'templates/paiement.html',
+    controller: 'PaiementCtrl'
   })
 
   // Template par defaut

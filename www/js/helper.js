@@ -10,12 +10,14 @@ function showAll(pizzasMkd) {
   for(var i in pizzasMkd) {
     var div = document.createElement("div");
     div.setAttribute("class", "pizza col-25");
+    var a = document.createElement("a");
+    a.setAttribute("ng-click", "getPizza()");
     var img = document.createElement("img");
     img.setAttribute("src", "img/pizzas/"+pizzasMkd[i].img);
-    img.setAttribute("onclick", "alert('test')");
+    a.appendChild(img);
     var h4 = document.createElement("h4");
     h4.innerHTML = pizzasMkd[i].name
-    div.appendChild(img);
+    div.appendChild(a);
     div.appendChild(h4);
     divPizzas.appendChild(div);
     /* Add Row */

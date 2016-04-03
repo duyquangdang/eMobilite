@@ -16,7 +16,6 @@
 			</button>
 		</div>
 		<div class="col-80 padding">
-		<!-- <span ng-click="modal.show();selectTimer(10)">&nbsp;10 sec timer</span> -->
 			<div class="progress-wrapper">
         <div class="progress">
           {{humanizeDurationTimer(timer,'s')}}
@@ -35,7 +34,7 @@
         </div>
       </div>
       <!-- Once it is running -->
-      <div ng-if="started && !done">
+      <!--<div ng-if="started && !done">
         <div class="row">
           <div class="col">
             <button class="button button-outline button-energized button-rounded button-block" ng-click='pauseTimer()'>
@@ -48,7 +47,7 @@
             </button>
           </div>
         </div>
-      </div>
+      </div>-->
       <!-- Once it is paused -->
       <div ng-if="!started && paused && !done">
         <div class="row">
@@ -67,15 +66,23 @@
       <!-- When it has completed -->
       <div ng-if="done" class="text-center">
         <div class="row">
-          <button class="button button-outline button-balanced button-rounded button-block" ng-click="modal.hide();stopTimer(true);">
+          <!--<button class="button button-outline button-balanced button-rounded button-block" ng-click="modal.hide();stopTimer(true);">
             Done
-          </button>
+          </button>-->
         </div>
         <div class="text-center">
           <i class="ion-ribbon-b bigIcon" style="font-size: 40px;"></i>
           <br>
-          <h2>Congratulations</h2>
+          <h2>Votre commande est prête !</h2>
         </div>
+      </div>
+      <div id="bottomButtonDiv" class="row">
+        <button ui-sref="paiement" class="col-25 button button-stable bottomButton">
+          Paiement
+        </button>
+        <button ui-sref="commentaire" class="col-25 button button-stable bottomButton">
+          Mettre un commentaire
+        </button>
       </div>
 		</div>
 	</div>
