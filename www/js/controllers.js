@@ -1,7 +1,7 @@
+/* Var global */
 var commandes = JSON.parse('[{"id":"1","tbl_id":"1","user_id":"1","pizza_id":"0","bois_id":"0","dess_id":"0","pret":"0"},{"id":"2","tbl_id":"1","user_id":"1","pizza_id":"0","bois_id":"0","dess_id":"0","pret":"0"},{"id":"3","tbl_id":"1","user_id":"1","pizza_id":"0","bois_id":"0","dess_id":"0","pret":"0"},{"id":"5","tbl_id":"1","user_id":"1","pizza_id":"1","bois_id":"2","dess_id":"3","pret":"0"},{"id":"6","tbl_id":"1","user_id":"1","pizza_id":"5","bois_id":"6","dess_id":"7","pret":"0"},{"id":"7","tbl_id":"1","user_id":"1","pizza_id":"9","bois_id":"10","dess_id":"11","pret":"0"},{"id":"8","tbl_id":"1","user_id":"1","pizza_id":"13","bois_id":"14","dess_id":"15","pret":"0"},{"id":"9","tbl_id":"1","user_id":"1","pizza_id":"1","bois_id":"0","dess_id":"0","pret":"0"},{"id":"10","tbl_id":"1","user_id":"2","pizza_id":"21","bois_id":"22","dess_id":"23","pret":"0"},{"id":"11","tbl_id":"1","user_id":"2","pizza_id":"25","bois_id":"26","dess_id":"27","pret":"0"},{"id":"12","tbl_id":"1","user_id":"2","pizza_id":"29","bois_id":"30","dess_id":"31","pret":"0"},{"id":"13","tbl_id":"1","user_id":"2","pizza_id":"33","bois_id":"34","dess_id":"35","pret":"0"},{"id":"14","tbl_id":"1","user_id":"3","pizza_id":"1","bois_id":"2","dess_id":"3","pret":"0"},{"id":"15","tbl_id":"1","user_id":"3","pizza_id":"3","bois_id":"4","dess_id":"5","pret":"0"}]');
 var pizzasMkd = JSON.parse('[{"id":"1","name":"Bacon Groovy","img":"baconGroovy.png","PIZMKD_ING1":"1","PIZMKD_ING2":"7","PIZMKD_ING3":"2","PIZMKD_ING4":"9","PIZMKD_ING5":"21"},{"id":"2","name":"Cannibale","img":"cannibale.png","PIZMKD_ING1":"21","PIZMKD_ING2":"1","PIZMKD_ING3":"7","PIZMKD_ING4":"5","PIZMKD_ING5":"22"},{"id":"3","name":"Divine Pepper","img":"divinePepper.png","PIZMKD_ING1":"1","PIZMKD_ING2":"3","PIZMKD_ING3":"4","PIZMKD_ING4":"5","PIZMKD_ING5":"0"},{"id":"4","name":"Extravaganzza","img":"extravaganzza.png","PIZMKD_ING1":"1","PIZMKD_ING2":"23","PIZMKD_ING3":"19","PIZMKD_ING4":"5","PIZMKD_ING5":"28"},{"id":"5","name":"Forestiere","img":"forestiere.png","PIZMKD_ING1":"1","PIZMKD_ING2":"12","PIZMKD_ING3":"2","PIZMKD_ING4":"19","PIZMKD_ING5":"6"},{"id":"6","name":"Original Moutarde","img":"originalMoutarde.png","PIZMKD_ING1":"1","PIZMKD_ING2":"2","PIZMKD_ING3":"6","PIZMKD_ING4":"7","PIZMKD_ING5":"8"},{"id":"7","name":"Pepperoni","img":"pepperoni.png","PIZMKD_ING1":"1","PIZMKD_ING2":"7","PIZMKD_ING3":"23","PIZMKD_ING4":"3","PIZMKD_ING5":"24"},{"id":"8","name":"4 fromages","img":"quatreFromages.png","PIZMKD_ING1":"1","PIZMKD_ING2":"15","PIZMKD_ING3":"24","PIZMKD_ING4":"27","PIZMKD_ING5":"0"},{"id":"9","name":"Raclette","img":"raclette.png","PIZMKD_ING1":"1","PIZMKD_ING2":"9","PIZMKD_ING3":"2","PIZMKD_ING4":"10","PIZMKD_ING5":"11"},{"id":"10","name":"Saumoneta","img":"saumoneta.png","PIZMKD_ING1":"1","PIZMKD_ING2":"2","PIZMKD_ING3":"13","PIZMKD_ING4":"25","PIZMKD_ING5":"26"},{"id":"11","name":"Savoyarde","img":"savoyarde.png","PIZMKD_ING1":"1","PIZMKD_ING2":"12","PIZMKD_ING3":"13","PIZMKD_ING4":"14","PIZMKD_ING5":"0"},{"id":"12","name":"Sublim Curry","img":"sublimCurry.png","PIZMKD_ING1":"1","PIZMKD_ING2":"7","PIZMKD_ING3":"2","PIZMKD_ING4":"17","PIZMKD_ING5":"18"}]');
 var ingredients =  JSON.parse('[{"id":"1","name":"Mozzarela","prix":"1.5","categorie":"FROMAGE"},{"id":"2","name":"Oignon","prix":"1.1","categorie":"AUTRES"},{"id":"3","name":"Tomates fraîches","prix":"1.2","categorie":"AUTRES"},{"id":"4","name":"Sauce au poivre","prix":"1.6","categorie":"SAUCE"},{"id":"5","name":"Boulettes de bœuf épicé","prix":"2","categorie":"VIANDE"},{"id":"6","name":"Champignons","prix":"1.2","categorie":"AUTRES"},{"id":"7","name":"Poulet rôti","prix":"2.2","categorie":"VIANDE"},{"id":"8","name":"Sauce à la moutarde à lancienne","prix":"1.3","categorie":"SAUCE"},{"id":"9","name":"Bacon","prix":"1.8","categorie":"VIANDE"},{"id":"10","name":"Potatoes","prix":"1.1","categorie":"AUTRES"},{"id":"11","name":"Raclette","prix":"1.4","categorie":"FROMAGE"},{"id":"12","name":"Lardons fumés","prix":"1.7","categorie":"VIANDE"},{"id":"13","name":"Pommes de terre","prix":"1.2","categorie":"AUTRES"},{"id":"14","name":"Reblochon","prix":"1.7","categorie":"FROMAGE"},{"id":"15","name":"Chèvre","prix":"1.4","categorie":"FROMAGE"},{"id":"16","name":"Miel","prix":"1","categorie":"SAUCE"},{"id":"17","name":"Poivrons mélangés","prix":"1","categorie":"AUTRES"},{"id":"18","name":"Sauce curry","prix":"1.2","categorie":"SAUCE"},{"id":"19","name":"Jambon","prix":"1.5","categorie":"VIANDE"},{"id":"20","name":"Origan","prix":"1.1","categorie":"AUTRES"},{"id":"21","name":"Sauce barbecue","prix":"1.2","categorie":"SAUCE"},{"id":"22","name":"MERGUEZ","prix":"2.1","categorie":"VIANDE"},{"id":"23","name":"Saucisson pepperoni","prix":"2.4","categorie":"VIANDE"},{"id":"24","name":"Emmental","prix":"1.5","categorie":"FROMAGE"},{"id":"25","name":"Saumon fumé","prix":"3","categorie":"VIANDE"},{"id":"26","name":"Aneth","prix":"0.7","categorie":"AUTRES"},{"id":"27","name":"Fourme dAmbert","prix":"1.4","categorie":"FROMAGE"},{"id":"28","name":"Olives noires","prix":"1.7","categorie":"AUTRES"},{"id":"29","name":"Ananas","prix":"1.9","categorie":"AUTRES"}]');
-
 
 angular.module('starter.controllers', [])
   /* ****************
@@ -53,7 +53,7 @@ angular.module('starter.controllers', [])
     };
   })
   //Pizzas
-  .controller('PizzasCtrl', function($scope, Pizzas, $stateParams, $state) {
+  .controller('PizzasCtrl', function($scope, Pizzas, $stateParams, $state, $ionicPopup) {
     //Paramètres
     $scope.commandes = commandes;
     $scope.pizzasMkd = pizzasMkd;
@@ -109,10 +109,27 @@ angular.module('starter.controllers', [])
     }
     $scope.userCommande = userCommande;
     console.log($scope.userCommande);
+
+    // Function
+    /* Popup */
+    $scope.call = function() {
+      var confirmPopup = $ionicPopup.confirm({
+        title: 'Appeler le serveur',
+        template: 'Avez vous une question a poser au serveur ?'
+      });
+
+      confirmPopup.then(function(res) {
+        if(res) {
+          console.log('You are sure');
+        } else {
+          console.log('You are not sure');
+        }
+      });
+    };
   })
 
   //Pizza Custom
-  .controller('PizzaCustomCtrl', function($scope, $state, $stateParams) {
+  .controller('PizzaCustomCtrl', function($scope, $state, $stateParams, $ionicPopup) {
     $scope.pizzasMkd = pizzasMkd;
     $scope.ingredients = ingredients;
     for(var i=0; i<$scope.pizzasMkd.length; i++) {
@@ -156,15 +173,63 @@ angular.module('starter.controllers', [])
     while($scope.pizza.ingredients.length != 5) {
       $scope.pizza.ingredients.push({categorie:"", id:"", name:"", prix:""});
     }
+    // Function
+    /* Popup */
+    $scope.call = function() {
+      var confirmPopup = $ionicPopup.confirm({
+        title: 'Appeler le serveur',
+        template: 'Avez vous une question a poser au serveur ?'
+      });
+
+      confirmPopup.then(function(res) {
+        if(res) {
+          console.log('You are sure');
+        } else {
+          console.log('You are not sure');
+        }
+      });
+    };
   })
 
   //Boissons
-  .controller('BoissonsCtrl', function($scope, Boissons) {
+  .controller('BoissonsCtrl', function($scope, Boissons, $ionicPopup) {
     $scope.boissons = Boissons.all();
+    // Function
+    /* Popup */
+    $scope.call = function() {
+      var confirmPopup = $ionicPopup.confirm({
+        title: 'Appeler le serveur',
+        template: 'Avez vous une question a poser au serveur ?'
+      });
+
+      confirmPopup.then(function(res) {
+        if(res) {
+          console.log('You are sure');
+        } else {
+          console.log('You are not sure');
+        }
+      });
+    };
   })
   //Desserts
-  .controller('DessertsCtrl', function($scope, Desserts) {
+  .controller('DessertsCtrl', function($scope, Desserts, $ionicPopup) {
     $scope.desserts = Desserts.all();
+    // Function
+    /* Popup */
+    $scope.call = function() {
+      var confirmPopup = $ionicPopup.confirm({
+        title: 'Appeler le serveur',
+        template: 'Avez vous une question a poser au serveur ?'
+      });
+
+      confirmPopup.then(function(res) {
+        if(res) {
+          console.log('You are sure');
+        } else {
+          console.log('You are not sure');
+        }
+      });
+    };
   })
   //Cuisine
   .controller('CuisineCtrl', function($scope, Commandes) {
@@ -176,16 +241,46 @@ angular.module('starter.controllers', [])
   })
 
   //Commentaire
-  .controller('CommentaireCtrl', function($scope) {
+  .controller('CommentaireCtrl', function($scope, $ionicPopup) {
+    // Function
+    /* Popup */
+    $scope.call = function() {
+      var confirmPopup = $ionicPopup.confirm({
+        title: 'Appeler le serveur',
+        template: 'Avez vous une question a poser au serveur ?'
+      });
 
+      confirmPopup.then(function(res) {
+        if(res) {
+          console.log('You are sure');
+        } else {
+          console.log('You are not sure');
+        }
+      });
+    };
   })
 
-  //Paeiment
-  .controller('PaiementCtrl', function($scope) {
+  //Paiement
+  .controller('PaiementCtrl', function($scope, $ionicPopup) {
+    // Function
+    /* Popup */
+    $scope.call = function() {
+      var confirmPopup = $ionicPopup.confirm({
+        title: 'Appeler le serveur',
+        template: 'Avez vous une question a poser au serveur ?'
+      });
 
+      confirmPopup.then(function(res) {
+        if(res) {
+          console.log('You are sure');
+        } else {
+          console.log('You are not sure');
+        }
+      });
+    };
   })
   //Timer
-  .controller('TimerCtrl', function($scope, $ionicModal, $timeout) {
+  .controller('TimerCtrl', function($scope, $ionicModal, $timeout, $ionicPopup) {
     // Timer
     var mytimeout = null; // the current timeoutID
     // actual timer method, counts down every second, stops on zero
@@ -265,4 +360,21 @@ angular.module('starter.controllers', [])
 
     $scope.selectTimer(4);
     $scope.startTimer();
+
+    // Function
+    /* Popup */
+    $scope.call = function() {
+      var confirmPopup = $ionicPopup.confirm({
+        title: 'Appeler le serveur',
+        template: 'Avez vous une question a poser au serveur ?'
+      });
+
+      confirmPopup.then(function(res) {
+        if(res) {
+          console.log('You are sure');
+        } else {
+          console.log('You are not sure');
+        }
+      });
+    };
   })

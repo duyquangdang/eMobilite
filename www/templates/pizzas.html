@@ -35,7 +35,7 @@
                   -->
         </div>
 
-        <button class="button button-balanced" ng-click="getPizza(-1)">
+        <button class="button button-balanced">
           Valider
         </button>
       </div>
@@ -55,7 +55,7 @@
             </div>
           </div>
           <div class="col-50 col-center floatRight">
-            <button class="button button-energized">
+            <button class="button button-energized" ng-click="getPizza(-1)">
               Creer votre propre pizza
             </button>
           </div>
@@ -84,7 +84,7 @@
             <h4>{{pizza.name}}</h4>
           </div>
         </ion-scroll>
-        <button class="col-25 button button-stable bottomButtonHelp" id="button">
+        <button ng-click="call()" class="col-25 button button-stable bottomButtonHelp" id="button">
           Appeler le serveur
         </button>
         <div id="bottomButtonDiv" class="row">
