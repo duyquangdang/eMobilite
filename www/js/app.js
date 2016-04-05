@@ -22,8 +22,34 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
     /*if (window.StatusBar) {
       StatusBar.styleDefault();
     }*/
-    db = $cordovaSQLite.openDB("nextflow.db");
-    $cordovaSQLite.execute(db, 'CREATE TABLE IF NOT EXISTS Messages (id INTEGER PRIMARY KEY AUTOINCREMENT, message TEXT)');
+    db = $cordovaSQLite.openDB("mikados.db");
+    $cordovaSQLite.execute(db, 'CREATE TABLE IF NOT EXISTS tables (TBL_ID INTEGER PRIMARY KEY AUTOINCREMENT, TBL_NUM INTEGER, TBL_ZONE INTERGER, TBL_RESERVEE INTEGER DEFAULT 0,TBL_PAIEMENT INTEGER DEFAULT 0)');
+
+    var sql = 'INSERT INTO `tables` (`TBL_ID`, `TBL_NUM`, `TBL_ZONE`, `TBL_RESERVEE`, `TBL_PAIEMENT`) VALUES (1, 1, 1, 0, 0),';
+    sql += '(2, 2, 1, 0, 0),';
+    sql += '(3, 3, 1, 0, 0),';
+    sql += '(4, 4, 1, 0, 0),';
+    sql += '(5, 1, 2, 0, 0),';
+    sql += '(6, 2, 2, 0, 0),';
+    sql += '(7, 3, 2, 0, 0),';
+    sql += '(8, 4, 2, 0, 0),';
+    sql += '(9, 1, 3, 0, 0),';
+    sql += '(10, 2, 3, 0, 0),';
+    sql += '(11, 3, 3, 0, 0),';
+    sql += '(12, 4, 3, 0, 0),';
+    sql += '(13, 1, 4, 0, 0),';
+    sql += '(14, 2, 4, 0, 0),';
+    sql += '(15, 3, 4, 0, 0),';
+    sql += '(16, 4, 4, 0, 0),';
+    sql += '(17, 1, 5, 0, 0),';
+    sql += '(18, 2, 5, 0, 0),';
+    sql += '(19, 3, 5, 0, 0),';
+    sql += '(20, 4, 5, 0, 0),';
+    sql += '(21, 1, 6, 0, 0),';
+    sql += '(22, 2, 6, 0, 0),';
+    sql += '(23, 3, 6, 0, 0),';
+    sql += '(24, 4, 6, 0, 0)';
+    $cordovaSQLite.execute(db, sql);
   });
 })
 

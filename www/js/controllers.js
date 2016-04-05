@@ -10,36 +10,21 @@ angular.module('starter.controllers', [])
 
   //Home
   .controller('HomeCtrl', function($scope, $state, $http, $ionicPopup, $cordovaSQLite) {
-      $scope.save = function(newMessage) {
-
-        // execute INSERT statement with parameter
-        $cordovaSQLite.execute(db, 'INSERT INTO Messages (message) VALUES (?)', [newMessage])
-          .then(function(result) {
-            $scope.statusMessage = "Message saved successful, cheers!";
-          }, function(error) {
-            $scope.statusMessage = "Error on saving: " + error.message;
-          })
-      }
-
-      $scope.load = function() {
-
-        // Execute SELECT statement to load message from database.
-        $cordovaSQLite.execute(db, 'SELECT * FROM Messages ORDER BY id DESC')
-          .then(
-            function(res) {
-              for(var i=0; i<res.rows.length; i++) {
-                console.log(res.rows.item(i).message);
-              }
-              if (res.rows.length > 0) {
-                $scope.newMessage = res.rows.item(0).message;
-                $scope.statusMessage = "Message loaded successful, cheers!";
-              }
-            },
-            function(error) {
-              $scope.statusMessage = "Error on loading: " + error.message;
+    $scope.load = function() {
+      // Execute SELECT statement to load message from database.
+      $cordovaSQLite.execute(db, 'SELECT * FROM tables')
+        .then(
+          function(res) {
+            if (res.rows.length > 0) {
+              $scope.newMessage = res.rows.item(0).TBL_ID;
+              $scope.statusMessage = res.rows.item(0).TBL_ID + " " + res.rows.length;
             }
-          );
-      }
+          },
+          function(error) {
+            $scope.statusMessage = "Error on loading: " + error.message;
+          }
+        );
+    }
   })
 
   //Password
