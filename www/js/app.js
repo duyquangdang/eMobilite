@@ -1,6 +1,8 @@
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'angular-svg-round-progress', 'ngMessages'])
+var db;
 
-.run(function($ionicPlatform, $ionicPopup) {
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'angular-svg-round-progress', 'ngMessages', 'ngCordova'])
+
+.run(function($ionicPlatform, $ionicPopup, $cordovaSQLite) {
 	/*$ionicPlatform.registerBackButtonAction(function(event) {
     if (true) { // your check here
       $ionicPopup.alert({
@@ -11,15 +13,18 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', '
   }, 100);*/
 
   $ionicPlatform.ready(function() {
-    if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
-	  cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-      cordova.plugins.Keyboard.disableScroll(true);
+	  /* Delete this for sqllite */
+    // if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
+	  // cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+      // cordova.plugins.Keyboard.disableScroll(true);
 
-    }
-    if (window.StatusBar) {
+    // }
+    /*if (window.StatusBar) {
       StatusBar.styleDefault();
-    }
-	});
+    }*/
+    db = $cordovaSQLite.openDB("nextflow.db");
+    $cordovaSQLite.execute(db, 'CREATE TABLE IF NOT EXISTS Messages (id INTEGER PRIMARY KEY AUTOINCREMENT, message TEXT)');
+  });
 })
 
 
