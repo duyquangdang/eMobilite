@@ -37,17 +37,17 @@
           </button>
         </div>
         <div class="boissons" collection-repeat="boisson in boissons" item-height="25%" item-width="25%">
-          <img ng-src="{{boisson.url}}">
+          <img ng-src="{{boisson.img}}">
           <h4>{{boisson.name}}</h4>
         </div>
         <button class="col-25 button button-stable bottomButtonHelp">
           Appeler le serveur
         </button>
         <div id="bottomButtonDiv" class="row">
-          <button ui-sref="pizzas" class="col-25 button button-stable bottomButton">
+          <button ng-click="goToPizzas()" class="col-25 button button-stable bottomButton">
             Revenir aux pizzas
           </button>
-          <button ui-sref="desserts" class="col-25 button button-stable bottomButton">
+          <button ng-click="goToDesserts()" class="col-25 button button-stable bottomButton">
             Passer aux desserts
           </button>
         </div>

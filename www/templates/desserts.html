@@ -38,7 +38,7 @@
 			</div>
 			<ion-scroll direction="y" class="available-scroller" style="width: 100%; height: 70vh">
 				<div class="desserts" collection-repeat="dessert in desserts" item-height="25%" item-width="25%">
-					<img ng-src="{{dessert.url}}">
+					<img ng-src="{{dessert.img}}">
 					<h4>{{dessert.name}}</h4>
 				</div>
 			</ion-scroll>
@@ -46,7 +46,7 @@
 					Appeler le serveur
 			</button>
 			<div id="bottomButtonDiv" class="row">
-				<button ui-sref="boissons" class="col-25 button button-stable bottomButton">
+				<button ng-click="goToBoissons()" class="col-25 button button-stable bottomButton">
 					Revenir aux boissons
 				</button>
 				<button ui-sref="timer" class="col-25 button button-stable bottomButton">

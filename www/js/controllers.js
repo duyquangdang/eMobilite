@@ -1,7 +1,7 @@
 /* Var global */
-var commandes = JSON.parse('[{"id":"1","tbl_id":"1","user_id":"1","pizza_id":"0","bois_id":"0","dess_id":"0","pret":"0"},{"id":"2","tbl_id":"1","user_id":"1","pizza_id":"0","bois_id":"0","dess_id":"0","pret":"0"},{"id":"3","tbl_id":"1","user_id":"1","pizza_id":"0","bois_id":"0","dess_id":"0","pret":"0"},{"id":"5","tbl_id":"1","user_id":"1","pizza_id":"1","bois_id":"2","dess_id":"3","pret":"0"},{"id":"6","tbl_id":"1","user_id":"1","pizza_id":"5","bois_id":"6","dess_id":"7","pret":"0"},{"id":"7","tbl_id":"1","user_id":"1","pizza_id":"9","bois_id":"10","dess_id":"11","pret":"0"},{"id":"8","tbl_id":"1","user_id":"1","pizza_id":"13","bois_id":"14","dess_id":"15","pret":"0"},{"id":"9","tbl_id":"1","user_id":"1","pizza_id":"1","bois_id":"0","dess_id":"0","pret":"0"},{"id":"10","tbl_id":"1","user_id":"2","pizza_id":"21","bois_id":"22","dess_id":"23","pret":"0"},{"id":"11","tbl_id":"1","user_id":"2","pizza_id":"25","bois_id":"26","dess_id":"27","pret":"0"},{"id":"12","tbl_id":"1","user_id":"2","pizza_id":"29","bois_id":"30","dess_id":"31","pret":"0"},{"id":"13","tbl_id":"1","user_id":"2","pizza_id":"33","bois_id":"34","dess_id":"35","pret":"0"},{"id":"14","tbl_id":"1","user_id":"3","pizza_id":"1","bois_id":"2","dess_id":"3","pret":"0"},{"id":"15","tbl_id":"1","user_id":"3","pizza_id":"3","bois_id":"4","dess_id":"5","pret":"0"}]');
-var pizzasMkd = JSON.parse('[{"id":"1","name":"Bacon Groovy","img":"baconGroovy.png","PIZMKD_ING1":"1","PIZMKD_ING2":"7","PIZMKD_ING3":"2","PIZMKD_ING4":"9","PIZMKD_ING5":"21"},{"id":"2","name":"Cannibale","img":"cannibale.png","PIZMKD_ING1":"21","PIZMKD_ING2":"1","PIZMKD_ING3":"7","PIZMKD_ING4":"5","PIZMKD_ING5":"22"},{"id":"3","name":"Divine Pepper","img":"divinePepper.png","PIZMKD_ING1":"1","PIZMKD_ING2":"3","PIZMKD_ING3":"4","PIZMKD_ING4":"5","PIZMKD_ING5":"0"},{"id":"4","name":"Extravaganzza","img":"extravaganzza.png","PIZMKD_ING1":"1","PIZMKD_ING2":"23","PIZMKD_ING3":"19","PIZMKD_ING4":"5","PIZMKD_ING5":"28"},{"id":"5","name":"Forestiere","img":"forestiere.png","PIZMKD_ING1":"1","PIZMKD_ING2":"12","PIZMKD_ING3":"2","PIZMKD_ING4":"19","PIZMKD_ING5":"6"},{"id":"6","name":"Original Moutarde","img":"originalMoutarde.png","PIZMKD_ING1":"1","PIZMKD_ING2":"2","PIZMKD_ING3":"6","PIZMKD_ING4":"7","PIZMKD_ING5":"8"},{"id":"7","name":"Pepperoni","img":"pepperoni.png","PIZMKD_ING1":"1","PIZMKD_ING2":"7","PIZMKD_ING3":"23","PIZMKD_ING4":"3","PIZMKD_ING5":"24"},{"id":"8","name":"4 fromages","img":"quatreFromages.png","PIZMKD_ING1":"1","PIZMKD_ING2":"15","PIZMKD_ING3":"24","PIZMKD_ING4":"27","PIZMKD_ING5":"0"},{"id":"9","name":"Raclette","img":"raclette.png","PIZMKD_ING1":"1","PIZMKD_ING2":"9","PIZMKD_ING3":"2","PIZMKD_ING4":"10","PIZMKD_ING5":"11"},{"id":"10","name":"Saumoneta","img":"saumoneta.png","PIZMKD_ING1":"1","PIZMKD_ING2":"2","PIZMKD_ING3":"13","PIZMKD_ING4":"25","PIZMKD_ING5":"26"},{"id":"11","name":"Savoyarde","img":"savoyarde.png","PIZMKD_ING1":"1","PIZMKD_ING2":"12","PIZMKD_ING3":"13","PIZMKD_ING4":"14","PIZMKD_ING5":"0"},{"id":"12","name":"Sublim Curry","img":"sublimCurry.png","PIZMKD_ING1":"1","PIZMKD_ING2":"7","PIZMKD_ING3":"2","PIZMKD_ING4":"17","PIZMKD_ING5":"18"}]');
-var ingredients =  JSON.parse('[{"id":"1","name":"Mozzarela","prix":"1.5","categorie":"FROMAGE"},{"id":"2","name":"Oignon","prix":"1.1","categorie":"AUTRES"},{"id":"3","name":"Tomates fraîches","prix":"1.2","categorie":"AUTRES"},{"id":"4","name":"Sauce au poivre","prix":"1.6","categorie":"SAUCE"},{"id":"5","name":"Boulettes de bœuf épicé","prix":"2","categorie":"VIANDE"},{"id":"6","name":"Champignons","prix":"1.2","categorie":"AUTRES"},{"id":"7","name":"Poulet rôti","prix":"2.2","categorie":"VIANDE"},{"id":"8","name":"Sauce à la moutarde à lancienne","prix":"1.3","categorie":"SAUCE"},{"id":"9","name":"Bacon","prix":"1.8","categorie":"VIANDE"},{"id":"10","name":"Potatoes","prix":"1.1","categorie":"AUTRES"},{"id":"11","name":"Raclette","prix":"1.4","categorie":"FROMAGE"},{"id":"12","name":"Lardons fumés","prix":"1.7","categorie":"VIANDE"},{"id":"13","name":"Pommes de terre","prix":"1.2","categorie":"AUTRES"},{"id":"14","name":"Reblochon","prix":"1.7","categorie":"FROMAGE"},{"id":"15","name":"Chèvre","prix":"1.4","categorie":"FROMAGE"},{"id":"16","name":"Miel","prix":"1","categorie":"SAUCE"},{"id":"17","name":"Poivrons mélangés","prix":"1","categorie":"AUTRES"},{"id":"18","name":"Sauce curry","prix":"1.2","categorie":"SAUCE"},{"id":"19","name":"Jambon","prix":"1.5","categorie":"VIANDE"},{"id":"20","name":"Origan","prix":"1.1","categorie":"AUTRES"},{"id":"21","name":"Sauce barbecue","prix":"1.2","categorie":"SAUCE"},{"id":"22","name":"MERGUEZ","prix":"2.1","categorie":"VIANDE"},{"id":"23","name":"Saucisson pepperoni","prix":"2.4","categorie":"VIANDE"},{"id":"24","name":"Emmental","prix":"1.5","categorie":"FROMAGE"},{"id":"25","name":"Saumon fumé","prix":"3","categorie":"VIANDE"},{"id":"26","name":"Aneth","prix":"0.7","categorie":"AUTRES"},{"id":"27","name":"Fourme dAmbert","prix":"1.4","categorie":"FROMAGE"},{"id":"28","name":"Olives noires","prix":"1.7","categorie":"AUTRES"},{"id":"29","name":"Ananas","prix":"1.9","categorie":"AUTRES"}]');
+//var commandes = JSON.parse('[{"id":"1","tbl_id":"1","user_id":"1","pizza_id":"0","bois_id":"0","dess_id":"0","pret":"0"},{"id":"2","tbl_id":"1","user_id":"1","pizza_id":"0","bois_id":"0","dess_id":"0","pret":"0"},{"id":"3","tbl_id":"1","user_id":"1","pizza_id":"0","bois_id":"0","dess_id":"0","pret":"0"},{"id":"5","tbl_id":"1","user_id":"1","pizza_id":"1","bois_id":"2","dess_id":"3","pret":"0"},{"id":"6","tbl_id":"1","user_id":"1","pizza_id":"5","bois_id":"6","dess_id":"7","pret":"0"},{"id":"7","tbl_id":"1","user_id":"1","pizza_id":"9","bois_id":"10","dess_id":"11","pret":"0"},{"id":"8","tbl_id":"1","user_id":"1","pizza_id":"13","bois_id":"14","dess_id":"15","pret":"0"},{"id":"9","tbl_id":"1","user_id":"1","pizza_id":"1","bois_id":"0","dess_id":"0","pret":"0"},{"id":"10","tbl_id":"1","user_id":"2","pizza_id":"21","bois_id":"22","dess_id":"23","pret":"0"},{"id":"11","tbl_id":"1","user_id":"2","pizza_id":"25","bois_id":"26","dess_id":"27","pret":"0"},{"id":"12","tbl_id":"1","user_id":"2","pizza_id":"29","bois_id":"30","dess_id":"31","pret":"0"},{"id":"13","tbl_id":"1","user_id":"2","pizza_id":"33","bois_id":"34","dess_id":"35","pret":"0"},{"id":"14","tbl_id":"1","user_id":"3","pizza_id":"1","bois_id":"2","dess_id":"3","pret":"0"},{"id":"15","tbl_id":"1","user_id":"3","pizza_id":"3","bois_id":"4","dess_id":"5","pret":"0"}]');
+//var pizzasMkd = JSON.parse('[{"id":"1","name":"Bacon Groovy","img":"baconGroovy.png","PIZMKD_ING1":"1","PIZMKD_ING2":"7","PIZMKD_ING3":"2","PIZMKD_ING4":"9","PIZMKD_ING5":"21"},{"id":"2","name":"Cannibale","img":"cannibale.png","PIZMKD_ING1":"21","PIZMKD_ING2":"1","PIZMKD_ING3":"7","PIZMKD_ING4":"5","PIZMKD_ING5":"22"},{"id":"3","name":"Divine Pepper","img":"divinePepper.png","PIZMKD_ING1":"1","PIZMKD_ING2":"3","PIZMKD_ING3":"4","PIZMKD_ING4":"5","PIZMKD_ING5":"0"},{"id":"4","name":"Extravaganzza","img":"extravaganzza.png","PIZMKD_ING1":"1","PIZMKD_ING2":"23","PIZMKD_ING3":"19","PIZMKD_ING4":"5","PIZMKD_ING5":"28"},{"id":"5","name":"Forestiere","img":"forestiere.png","PIZMKD_ING1":"1","PIZMKD_ING2":"12","PIZMKD_ING3":"2","PIZMKD_ING4":"19","PIZMKD_ING5":"6"},{"id":"6","name":"Original Moutarde","img":"originalMoutarde.png","PIZMKD_ING1":"1","PIZMKD_ING2":"2","PIZMKD_ING3":"6","PIZMKD_ING4":"7","PIZMKD_ING5":"8"},{"id":"7","name":"Pepperoni","img":"pepperoni.png","PIZMKD_ING1":"1","PIZMKD_ING2":"7","PIZMKD_ING3":"23","PIZMKD_ING4":"3","PIZMKD_ING5":"24"},{"id":"8","name":"4 fromages","img":"quatreFromages.png","PIZMKD_ING1":"1","PIZMKD_ING2":"15","PIZMKD_ING3":"24","PIZMKD_ING4":"27","PIZMKD_ING5":"0"},{"id":"9","name":"Raclette","img":"raclette.png","PIZMKD_ING1":"1","PIZMKD_ING2":"9","PIZMKD_ING3":"2","PIZMKD_ING4":"10","PIZMKD_ING5":"11"},{"id":"10","name":"Saumoneta","img":"saumoneta.png","PIZMKD_ING1":"1","PIZMKD_ING2":"2","PIZMKD_ING3":"13","PIZMKD_ING4":"25","PIZMKD_ING5":"26"},{"id":"11","name":"Savoyarde","img":"savoyarde.png","PIZMKD_ING1":"1","PIZMKD_ING2":"12","PIZMKD_ING3":"13","PIZMKD_ING4":"14","PIZMKD_ING5":"0"},{"id":"12","name":"Sublim Curry","img":"sublimCurry.png","PIZMKD_ING1":"1","PIZMKD_ING2":"7","PIZMKD_ING3":"2","PIZMKD_ING4":"17","PIZMKD_ING5":"18"}]');
+//var ingredients =  JSON.parse('[{"id":"1","name":"Mozzarela","prix":"1.5","categorie":"FROMAGE"},{"id":"2","name":"Oignon","prix":"1.1","categorie":"AUTRES"},{"id":"3","name":"Tomates fraîches","prix":"1.2","categorie":"AUTRES"},{"id":"4","name":"Sauce au poivre","prix":"1.6","categorie":"SAUCE"},{"id":"5","name":"Boulettes de bœuf épicé","prix":"2","categorie":"VIANDE"},{"id":"6","name":"Champignons","prix":"1.2","categorie":"AUTRES"},{"id":"7","name":"Poulet rôti","prix":"2.2","categorie":"VIANDE"},{"id":"8","name":"Sauce à la moutarde à lancienne","prix":"1.3","categorie":"SAUCE"},{"id":"9","name":"Bacon","prix":"1.8","categorie":"VIANDE"},{"id":"10","name":"Potatoes","prix":"1.1","categorie":"AUTRES"},{"id":"11","name":"Raclette","prix":"1.4","categorie":"FROMAGE"},{"id":"12","name":"Lardons fumés","prix":"1.7","categorie":"VIANDE"},{"id":"13","name":"Pommes de terre","prix":"1.2","categorie":"AUTRES"},{"id":"14","name":"Reblochon","prix":"1.7","categorie":"FROMAGE"},{"id":"15","name":"Chèvre","prix":"1.4","categorie":"FROMAGE"},{"id":"16","name":"Miel","prix":"1","categorie":"SAUCE"},{"id":"17","name":"Poivrons mélangés","prix":"1","categorie":"AUTRES"},{"id":"18","name":"Sauce curry","prix":"1.2","categorie":"SAUCE"},{"id":"19","name":"Jambon","prix":"1.5","categorie":"VIANDE"},{"id":"20","name":"Origan","prix":"1.1","categorie":"AUTRES"},{"id":"21","name":"Sauce barbecue","prix":"1.2","categorie":"SAUCE"},{"id":"22","name":"MERGUEZ","prix":"2.1","categorie":"VIANDE"},{"id":"23","name":"Saucisson pepperoni","prix":"2.4","categorie":"VIANDE"},{"id":"24","name":"Emmental","prix":"1.5","categorie":"FROMAGE"},{"id":"25","name":"Saumon fumé","prix":"3","categorie":"VIANDE"},{"id":"26","name":"Aneth","prix":"0.7","categorie":"AUTRES"},{"id":"27","name":"Fourme dAmbert","prix":"1.4","categorie":"FROMAGE"},{"id":"28","name":"Olives noires","prix":"1.7","categorie":"AUTRES"},{"id":"29","name":"Ananas","prix":"1.9","categorie":"AUTRES"}]');
 
 angular.module('starter.controllers', [])
   /* ****************
@@ -10,21 +10,6 @@ angular.module('starter.controllers', [])
 
   //Home
   .controller('HomeCtrl', function($scope, $state, $http, $ionicPopup, $cordovaSQLite) {
-    $scope.load = function() {
-      // Execute SELECT statement to load message from database.
-      $cordovaSQLite.execute(db, 'SELECT * FROM tables')
-        .then(
-          function(res) {
-            if (res.rows.length > 0) {
-              $scope.newMessage = res.rows.item(0).TBL_ID;
-              $scope.statusMessage = res.rows.item(0).TBL_ID + " " + res.rows.length;
-            }
-          },
-          function(error) {
-            $scope.statusMessage = "Error on loading: " + error.message;
-          }
-        );
-    }
   })
 
   //Password
@@ -45,12 +30,60 @@ angular.module('starter.controllers', [])
   })
 
   //Tables
-  .controller('TablesCtrl', function($scope, $state, $http, $stateParams){
+  .controller('TablesCtrl', function($scope, $state, $http, $stateParams, $cordovaSQLite){
+   
+    /*******************/
+    /*   SQL REQUETES  */
+    /*******************/
+
+    //Get table
+    $cordovaSQLite.execute(db, 'SELECT * FROM tables')
+      .then(
+
+        // On succes
+        function(res) {
+          $scope.tables = new Array();
+          for (i=0; i < res.rows.length; i++)
+          {
+            $scope.tables.push({
+              "id":res.rows.item(i).TBL_ID
+              ,"num":res.rows.item(i).TBL_NUM
+              ,"zone":res.rows.item(i).TBL_ZONE
+              ,"reservee":res.rows.item(i).TBL_RESERVEE
+              ,"paiement":res.rows.item(i).TBL_PAIEMENT
+            });
+          }
+          
+          //Recupere les tables par zone puis par numéro
+          //Indique si elles sont résérvées ou pas
+          $scope.zones = new Array();
+          $scope.zones[0] = new Array();
+          $scope.zones[0].id  = $scope.tables[0].zone;
+          var cpt = 0;
+          for(var i=0; i<$scope.tables.length; i++) {
+            if(!($scope.zones[cpt].id == $scope.tables[i].zone)) {
+              cpt++;
+              $scope.zones[cpt] = new Array();
+              $scope.zones[cpt].id = $scope.tables[i].zone;
+            }
+            $scope.zones[cpt].push($scope.tables[i]);
+          }
+        },
+
+        // On error
+        function(error) {
+          $scope.statusMessage = "Error on loading: " + error.message;
+        }
+      );
+    
+
+    // Pour les tests - A supprimer
+    /*
     $scope.tables = JSON.parse('[{"id":"1","num":"1","zone":"1","reservee":"1","paiement":"0"},{"id":"2","num":"2","zone":"1","reservee":"1","paiement":"0"},{"id":"3","num":"3","zone":"1","reservee":"1","paiement":"0"},{"id":"4","num":"4","zone":"1","reservee":"1","paiement":"0"},{"id":"5","num":"1","zone":"2","reservee":"0","paiement":"0"},{"id":"6","num":"2","zone":"2","reservee":"0","paiement":"0"},{"id":"7","num":"3","zone":"2","reservee":"0","paiement":"0"},{"id":"8","num":"4","zone":"2","reservee":"0","paiement":"0"},{"id":"9","num":"1","zone":"3","reservee":"0","paiement":"0"},{"id":"10","num":"2","zone":"3","reservee":"0","paiement":"0"},{"id":"11","num":"3","zone":"3","reservee":"0","paiement":"0"},{"id":"12","num":"4","zone":"3","reservee":"0","paiement":"0"},{"id":"13","num":"1","zone":"4","reservee":"0","paiement":"0"},{"id":"14","num":"2","zone":"4","reservee":"0","paiement":"0"},{"id":"15","num":"3","zone":"4","reservee":"0","paiement":"0"},{"id":"16","num":"4","zone":"4","reservee":"0","paiement":"0"},{"id":"17","num":"1","zone":"5","reservee":"0","paiement":"0"},{"id":"18","num":"2","zone":"5","reservee":"0","paiement":"0"},{"id":"19","num":"3","zone":"5","reservee":"0","paiement":"0"},{"id":"20","num":"4","zone":"5","reservee":"0","paiement":"0"},{"id":"21","num":"1","zone":"6","reservee":"0","paiement":"0"},{"id":"22","num":"2","zone":"6","reservee":"0","paiement":"0"},{"id":"23","num":"3","zone":"6","reservee":"0","paiement":"0"},{"id":"24","num":"4","zone":"6","reservee":"0","paiement":"0"}]');
+    //Recupere les tables par zone puis par numéro
+    //Indique si elles sont résérvées ou pas
     $scope.zones = new Array();
     $scope.zones[0] = new Array();
-    /* Recupere les tables par zone puis par numéro */
-    /* Indique si elles sont résérvées ou pas */
     $scope.zones[0].id  = $scope.tables[0].zone;
     var cpt = 0;
     for(var i=0; i<$scope.tables.length; i++) {
@@ -61,71 +94,151 @@ angular.module('starter.controllers', [])
       }
       $scope.zones[cpt].push($scope.tables[i]);
     }
+    */
+    // Fin Pour les tests - A supprimer
+    
 
     $scope.getPizzaMkd = function(tableID, tableNum){
       $state.go('pizzas', {tableID: tableID, tableNum: tableNum});
     };
   })
-  //Pizzas
-  .controller('PizzasCtrl', function($scope, Pizzas, $stateParams, $state, $ionicPopup) {
-    //Paramètres
-    $scope.commandes = commandes;
-    $scope.pizzasMkd = pizzasMkd;
-    $scope.ingredients =  ingredients;
 
+
+
+  //PIZZAS CONTROLLEUR
+  .controller('PizzasCtrl', function($scope, Pizzas, $stateParams, $state, $ionicPopup, $cordovaSQLite) {
+
+    /*******************/
+    /*    Paramètres   */
+    /*******************/
     $scope.tableID = $stateParams.tableID;
     $scope.tableNum = $stateParams.tableNum;
+    $scope.categoriePizzas = "All";
 
-    //Fonctions
-    $scope.getPizza = function(pizzaId){
-      $state.go('pizzaCustom', {tableID: $scope.tableID, tableNum: $scope.tableNum, pizzaId: pizzaId});
+    /*******************/
+    /*    Fonctions    */
+    /*******************/
+    $scope.getPizza = function(pizzaID){
+      $state.go('pizzaCustom', {tableID: $scope.tableID, tableNum: $scope.tableNum, pizzaID: pizzaID});
     };
 
     $scope.createUser = function (userName){
       $scope.name = userName;
     };
-    //Begin
-    if ($scope.commandes.length == 0)
-    {
-      $scope.name = '';
-    }
-    else
-    {
-      //Récupération des users ID
-      var listUsers = new Array();
-      for (i = 0; i < $scope.commandes.length; i++)
-      {
-        listUsers.push($scope.commandes[i].user_id);
-      }
 
-      //Supprimage des users ID en doublons
-      listUsers = listUsers.filter(function(v,i,a){
-        return a.indexOf(v)==i
-      });
-      //Création d'un objet contenant pour chaque utilisateur toutes ses commandes
-      var userCommande = new Array();
-      for (i = 0; i < listUsers.length; i++)
-      {
-        var listPizzas = Array();
-        var listBoissons = Array();
-        var listDesserts = Array();
-        for (j = 0; j < $scope.commandes.length; j++)
-        {
-          if(listUsers[i] == $scope.commandes[j].user_id)
+
+    $scope.getPizzaAll = function()
+    {
+      //Get Pizza par catégorie
+      $cordovaSQLite.execute(db, 'SELECT * FROM pizzas_mkd')
+        .then(
+
+          // On succes
+          function(res)
           {
-            listPizzas.push($scope.commandes[j].pizza_id);
-            listBoissons.push($scope.commandes[j].bois_id);
-            listDesserts.push($scope.commandes[j].dess_id);
-          }
-        }
-        userCommande.push({user_id:listUsers[i],listPizzas:listPizzas,listBoissons:listBoissons,listDesserts:listDesserts});
-      }
-    }
-    $scope.userCommande = userCommande;
-    console.log($scope.userCommande);
+            $scope.pizzasMkd = new Array();
+            for (i=0; i < res.rows.length; i++)
+            {
+              $scope.pizzasMkd.push({
+                "id":res.rows.item(i).PIZMKD_ID
+                ,"name":res.rows.item(i).PIZMKD_NAME
+                ,"img":res.rows.item(i).PIZMKD_IMG
+                ,"ing1":res.rows.item(i).PIZMKD_ING1
+                ,"ing2":res.rows.item(i).PIZMKD_ING2
+                ,"ing3":res.rows.item(i).PIZMKD_ING3
+                ,"ing4":res.rows.item(i).PIZMKD_ING4
+                ,"ing5":res.rows.item(i).PIZMKD_ING5
+                ,"categorie":res.rows.item(i).PIZMKD_CAT
+                ,"vote":res.rows.item(i).PIZMKD_VOTE
+              });
+            }
 
-    // Function
-    /* Popup */
+            $scope.categoriePizzas = "All";
+          },
+
+          // On error
+          function(error) {
+            $scope.statusMessage = "Error on loading: " + error.message;
+          }
+      );
+    }
+
+    $scope.getPizzaCat = function(categorie)
+    {
+      //Get Pizza par catégorie
+      $cordovaSQLite.execute(db, 'SELECT * FROM pizzas_mkd WHERE PIZMKD_CAT = (?)', [categorie])
+        .then(
+
+          // On succes
+          function(res)
+          {
+            $scope.pizzasMkd = new Array();
+            for (i=0; i < res.rows.length; i++)
+            {
+              $scope.pizzasMkd.push({
+                "id":res.rows.item(i).PIZMKD_ID
+                ,"name":res.rows.item(i).PIZMKD_NAME
+                ,"img":res.rows.item(i).PIZMKD_IMG
+                ,"ing1":res.rows.item(i).PIZMKD_ING1
+                ,"ing2":res.rows.item(i).PIZMKD_ING2
+                ,"ing3":res.rows.item(i).PIZMKD_ING3
+                ,"ing4":res.rows.item(i).PIZMKD_ING4
+                ,"ing5":res.rows.item(i).PIZMKD_ING5
+                ,"categorie":res.rows.item(i).PIZMKD_CAT
+                ,"vote":res.rows.item(i).PIZMKD_VOTE
+              });
+            }
+
+            $scope.categoriePizzas = categorie;
+          },
+
+          // On error
+          function(error) {
+            $scope.statusMessage = "Error on loading: " + error.message;
+          }
+      );
+    }
+
+    $scope.getPizzaTop = function(number)
+    {
+      //Get Pizza par catégorie
+      $cordovaSQLite.execute(db, 'SELECT * FROM pizzas_mkd ORDER BY PIZMKD_VOTE DESC limit (?)', [number])
+        .then(
+
+          // On succes
+          function(res)
+          {
+            $scope.pizzasMkd = new Array();
+            for (i=0; i < res.rows.length; i++)
+            {
+              $scope.pizzasMkd.push({
+                "id":res.rows.item(i).PIZMKD_ID
+                ,"name":res.rows.item(i).PIZMKD_NAME
+                ,"img":res.rows.item(i).PIZMKD_IMG
+                ,"ing1":res.rows.item(i).PIZMKD_ING1
+                ,"ing2":res.rows.item(i).PIZMKD_ING2
+                ,"ing3":res.rows.item(i).PIZMKD_ING3
+                ,"ing4":res.rows.item(i).PIZMKD_ING4
+                ,"ing5":res.rows.item(i).PIZMKD_ING5
+                ,"categorie":res.rows.item(i).PIZMKD_CAT
+                ,"vote":res.rows.item(i).PIZMKD_VOTE
+              });
+            }
+
+             $scope.categoriePizzas = "Top";
+          },
+
+          // On error
+          function(error) {
+            $scope.statusMessage = "Error on loading: " + error.message;
+          }
+      );
+    }
+
+    $scope.goToBoissons = function(){
+      $state.go('boissons', {tableID: $scope.tableID, tableNum: $scope.tableNum});
+    };
+
     $scope.call = function() {
       var confirmPopup = $ionicPopup.confirm({
         title: 'Appeler le serveur',
@@ -140,59 +253,135 @@ angular.module('starter.controllers', [])
         }
       });
     };
+
+
+    /*******************/
+    /*   SQL REQUETES  */
+    /*******************/
+
+    //Get Pizzas
+    $cordovaSQLite.execute(db, 'SELECT * FROM pizzas_mkd')
+      .then(
+
+        // On succes
+        function(res) {
+          $scope.pizzasMkd = new Array();
+          for (i=0; i < res.rows.length; i++)
+          {
+            $scope.pizzasMkd.push({
+              "id":res.rows.item(i).PIZMKD_ID
+              ,"name":res.rows.item(i).PIZMKD_NAME
+              ,"img":res.rows.item(i).PIZMKD_IMG
+              ,"ing1":res.rows.item(i).PIZMKD_ING1
+              ,"ing2":res.rows.item(i).PIZMKD_ING2
+              ,"ing3":res.rows.item(i).PIZMKD_ING3
+              ,"ing4":res.rows.item(i).PIZMKD_ING4
+              ,"ing5":res.rows.item(i).PIZMKD_ING5
+              ,"categorie":res.rows.item(i).PIZMKD_CAT
+              ,"vote":res.rows.item(i).PIZMKD_VOTE
+            });
+          }
+          
+        },
+
+        // On error
+        function(error) {
+          $scope.statusMessage = "Error on loading: " + error.message;
+        }
+      );
+
+    //Get commandes if exists
+    $cordovaSQLite.execute(db, 'SELECT * FROM commandes WHERE CMD_PRET=0 AND CMD_TBL_ID = (?)', [$scope.tableID])
+      .then(
+
+        // On succes
+        function(res) {
+          $scope.commandes = new Array();
+          for (i=0; i < res.rows.length; i++)
+          {
+            $scope.commandes.push({
+              "id":res.rows.item(i).CMD_ID
+              ,"tbl_id":res.rows.item(i).CMD_TBL_ID
+              ,"user_id":res.rows.item(i).CMD_USER_ID
+              ,"pizza_id":res.rows.item(i).CMD_PIZZA_ID
+              ,"bois_id":res.rows.item(i).CMD_BOIS_ID
+              ,"dess_id":res.rows.item(i).CMD_DESS_ID
+              ,"pret":res.rows.item(i).CMD_PRET
+            });
+          }
+
+          // S'il n'y avait pas de commande
+          if ($scope.commandes.length == 0)
+          {
+            $scope.name = '';
+          }
+
+          // Sinon si une commande était en cours
+          else
+          {
+            //Récupération des users ID
+            var listUsers = new Array();
+            for (i = 0; i < $scope.commandes.length; i++)
+            {
+              listUsers.push($scope.commandes[i].user_id);
+            }
+
+            //On supprime les users ID en doublons
+            listUsers = listUsers.filter(function(v,i,a){
+              return a.indexOf(v)==i
+            });
+
+            //Création d'un objet contenant pour chaque utilisateur toutes ses commandes
+            var userCommande = new Array();
+            for (i = 0; i < listUsers.length; i++)
+            {
+              var listPizzas = Array();
+              var listBoissons = Array();
+              var listDesserts = Array();
+              for (j = 0; j < $scope.commandes.length; j++)
+              {
+                if(listUsers[i] == $scope.commandes[j].user_id)
+                {
+                  listPizzas.push($scope.commandes[j].pizza_id);
+                  listBoissons.push($scope.commandes[j].bois_id);
+                  listDesserts.push($scope.commandes[j].dess_id);
+                }
+              }
+              userCommande.push({user_id:listUsers[i],listPizzas:listPizzas,listBoissons:listBoissons,listDesserts:listDesserts});
+            }
+          }
+          $scope.userCommande = userCommande;
+          
+          
+        },
+
+        // On error
+        function(error) {
+          $scope.statusMessage = "Error on loading: " + error.message;
+        }
+      );
+
+
   })
 
-  //Pizza Custom
-  .controller('PizzaCustomCtrl', function($scope, $state, $stateParams, $ionicPopup) {
-    $scope.pizzasMkd = pizzasMkd;
-    $scope.ingredients = ingredients;
-    for(var i=0; i<$scope.pizzasMkd.length; i++) {
-      if($scope.pizzasMkd[i].id == $stateParams.pizzaId) {
-        $scope.pizza = $scope.pizzasMkd[i];
-        break;
-      }
-    }
-    /* If ceate new Pizza */
-    if(typeof($scope.pizza) === 'undefined') {
-      $scope.pizza = {img:"pizzaEmpty.png",
-        PIZMKD_ING1:"",
-        PIZMKD_ING2:"",
-        PIZMKD_ING3:"",
-        PIZMKD_ING4:"",
-        PIZMKD_ING5:"",
-        id:"",
-        name:"VotrePizza"};
-    }
+  //PIZZAS CUSTOMCONTROLLEUR
+  .controller('PizzaCustomCtrl', function($scope, $state, $stateParams, $ionicPopup, $cordovaSQLite) {
 
-    $scope.pizza.ingredients = new Array();
-    for(var i=0; i<$scope.ingredients.length; i++) {
-      switch($scope.ingredients[i].id) {
-        case $scope.pizza.PIZMKD_ING1:
-          $scope.pizza.ingredients[0] = $scope.ingredients[i];
-          break;
-        case $scope.pizza.PIZMKD_ING2:
-          $scope.pizza.ingredients[1] = $scope.ingredients[i];
-          break;
-        case $scope.pizza.PIZMKD_ING3:
-          $scope.pizza.ingredients[2] = $scope.ingredients[i];
-          break;
-        case $scope.pizza.PIZMKD_ING4:
-          $scope.pizza.ingredients[3] = $scope.ingredients[i];
-          break;
-        case $scope.pizza.PIZMKD_ING5:
-          $scope.pizza.ingredients[4] = $scope.ingredients[i];
-          break;
-      }
-    }
-    while($scope.pizza.ingredients.length != 5) {
-      $scope.pizza.ingredients.push({categorie:"", id:"", name:"", prix:""});
-    }
-    // Function
-    /* Popup */
-    $scope.call = function() {
+    /*******************/
+    /*    Paramètres   */
+    /*******************/
+    $scope.pizzaID = $stateParams.pizzaID;
+    $scope.tableID = $stateParams.tableID;
+    $scope.tableNum = $stateParams.tableNum;
+
+    /*******************/
+    /*    Fonctions    */
+    /*******************/
+    $scope.call = function()
+    {
       var confirmPopup = $ionicPopup.confirm({
         title: 'Appeler le serveur',
-        template: 'Avez vous une question a poser au serveur ?'
+        template: 'Avez vous une question à poser au serveur ?'
       });
 
       confirmPopup.then(function(res) {
@@ -203,12 +392,166 @@ angular.module('starter.controllers', [])
         }
       });
     };
+
+    $scope.goToPizzas = function(){
+      $state.go('pizzas', {tableID: $scope.tableID, tableNum: $scope.tableNum});
+    };
+
+    $scope.goToBoissons = function(){
+      $state.go('boissons', {tableID: $scope.tableID, tableNum: $scope.tableNum});
+    };
+
+    /*******************/
+    /*   SQL REQUETES  */
+    /*******************/
+
+    //Get Pizzas
+    $cordovaSQLite.execute(db, 'SELECT * FROM pizzas_mkd WHERE PIZMKD_ID = (?)',[$scope.pizzaID])
+      .then(
+
+        // On succes
+        function(res) {
+          // Si la pizza existe
+          if (res.rows.length == 1)
+          {
+            $scope.pizza = {
+              "id":res.rows.item(0).PIZMKD_ID
+              ,"name":res.rows.item(0).PIZMKD_NAME
+              ,"img":res.rows.item(0).PIZMKD_IMG
+              ,"ing1":res.rows.item(0).PIZMKD_ING1
+              ,"ing2":res.rows.item(0).PIZMKD_ING2
+              ,"ing3":res.rows.item(0).PIZMKD_ING3
+              ,"ing4":res.rows.item(0).PIZMKD_ING4
+              ,"ing5":res.rows.item(0).PIZMKD_ING5
+              ,"categorie":res.rows.item(0).PIZMKD_CAT
+              ,"vote":res.rows.item(0).PIZMKD_VOTE
+            };
+          }
+
+          // Sinon si c'est une pizza custom
+          else
+          {
+            $scope.pizza = {
+              id:""
+              ,name:"Votre Pizza"
+              ,img:"pizzaEmpty.png"
+              ,ing1:""
+              ,ing2:""
+              ,ing3:""
+              ,ing4:""
+              ,ing5:""
+              ,categorie:""
+              ,vote:0
+            };
+          }
+
+
+          //Get Ingredients
+          $cordovaSQLite.execute(db, 'SELECT * FROM ingredients')
+            .then(
+
+              // On succes
+              function(res) {
+                $scope.ingredients = new Array();
+                for (i=0; i < res.rows.length; i++)
+                {
+                  $scope.ingredients.push({
+                    "id":res.rows.item(i).ING_ID
+                    ,"name":res.rows.item(i).ING_NOM
+                    ,"prix":res.rows.item(i).ING_PRIX
+                    ,"categorie":res.rows.item(i).ING_CATEGORIE
+                  });
+                }
+
+                $scope.pizza.ingredients = new Array();
+                for(var i=0; i<$scope.ingredients.length; i++)
+                {
+                  switch($scope.ingredients[i].id)
+                  {
+                    case $scope.pizza.ing1:
+                      $scope.pizza.ingredients[0] = $scope.ingredients[i];
+                      break;
+                    case $scope.pizza.ing2:
+                      $scope.pizza.ingredients[1] = $scope.ingredients[i];
+                      break;
+                    case $scope.pizza.ing3:
+                      $scope.pizza.ingredients[2] = $scope.ingredients[i];
+                      break;
+                    case $scope.pizza.ing4:
+                      $scope.pizza.ingredients[3] = $scope.ingredients[i];
+                      break;
+                    case $scope.pizza.ing5:
+                      $scope.pizza.ingredients[4] = $scope.ingredients[i];
+                      break;
+                  }
+                }
+                while($scope.pizza.ingredients.length != 5)
+                {
+                  $scope.pizza.ingredients.push({categorie:"", id:"", name:"", prix:""});
+                }
+                
+              },
+
+              // On error
+              function(error) {
+                $scope.statusMessage = "Error on loading: " + error.message;
+              }
+            );
+
+          
+        },
+
+        // On error
+        function(error) {
+          $scope.statusMessage = "Error on loading: " + error.message;
+        }
+      );
   })
 
   //Boissons
-  .controller('BoissonsCtrl', function($scope, Boissons, $ionicPopup) {
-    $scope.boissons = Boissons.all();
+  .controller('BoissonsCtrl', function($scope, $state, Boissons, $ionicPopup,$stateParams, $cordovaSQLite) {
+
+    /*******************/
+    /*    Paramètres   */
+    /*******************/
+    $scope.tableID = $stateParams.tableID;
+    $scope.tableNum = $stateParams.tableNum;
+
+    //Get boissons
+    $cordovaSQLite.execute(db, 'SELECT * FROM boissons')
+      .then(
+
+        // On succes
+        function(res)
+        {
+          $scope.boissons = new Array();
+          for (i=0; i < res.rows.length; i++)
+          {
+            $scope.boissons.push({
+              "id":res.rows.item(i).BOISS_ID
+              ,"name":res.rows.item(i).BOISS_NAME
+              ,"img":res.rows.item(i).BOISS_IMG
+              ,"categorie":res.rows.item(i).BOISS_CAT
+            });
+          }
+        },
+
+        // On error
+        function(error) {
+          $scope.statusMessage = "Error on loading: " + error.message;
+        }
+    );
+
     // Function
+    $scope.goToPizzas = function(){
+      $state.go('pizzas', {tableID: $scope.tableID, tableNum: $scope.tableNum});
+    };
+
+    $scope.goToDesserts = function(){
+      $state.go('desserts', {tableID: $scope.tableID, tableNum: $scope.tableNum});
+    };
+
+
     /* Popup */
     $scope.call = function() {
       var confirmPopup = $ionicPopup.confirm({
@@ -226,8 +569,39 @@ angular.module('starter.controllers', [])
     };
   })
   //Desserts
-  .controller('DessertsCtrl', function($scope, Desserts, $ionicPopup) {
-    $scope.desserts = Desserts.all();
+  .controller('DessertsCtrl', function($scope,$state, $stateParams,Desserts, $ionicPopup,$cordovaSQLite) {
+
+    /*******************/
+    /*    Paramètres   */
+    /*******************/
+    $scope.tableID = $stateParams.tableID;
+    $scope.tableNum = $stateParams.tableNum;
+
+    //Get desserts
+    $cordovaSQLite.execute(db, 'SELECT * FROM desserts')
+      .then(
+
+        // On succes
+        function(res)
+        {
+          $scope.desserts = new Array();
+          for (i=0; i < res.rows.length; i++)
+          {
+            $scope.desserts.push({
+              "id":res.rows.item(i).DESS_ID
+              ,"name":res.rows.item(i).DESS_NAME
+              ,"img":res.rows.item(i).DESS_IMG
+              ,"categorie":res.rows.item(i).DESS_CAT
+            });
+          }
+        },
+
+        // On error
+        function(error) {
+          $scope.statusMessage = "Error on loading: " + error.message;
+        }
+    );
+
     // Function
     /* Popup */
     $scope.call = function() {
@@ -244,6 +618,12 @@ angular.module('starter.controllers', [])
         }
       });
     };
+
+    $scope.goToBoissons = function(){
+      $state.go('boissons', {tableID: $scope.tableID, tableNum: $scope.tableNum});
+    };
+
+
   })
   //Cuisine
   .controller('CuisineCtrl', function($scope, Commandes) {

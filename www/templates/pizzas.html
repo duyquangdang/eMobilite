@@ -62,20 +62,20 @@
         </div>
         <hr>
         <div class="row list list-inline">
-          <button class="col-20 button button-assertive">
-            Top 10
+          <button ng-click="getPizzaAll()" ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categoriePizzas == 'All']">
+            Toutes
           </button>
-          <button class="col-20 button button-stable">
+          <button ng-click="getPizzaCat('VIANDE')" ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categoriePizzas == 'VIANDE']">
             Viande
           </button>
-          <button class="col-20 button button-stable">
+          <button ng-click="getPizzaCat('POISSON')" ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categoriePizzas == 'POISSON']">
             Poisson
           </button>
-          <button class="col-20 button button-stable">
+          <button ng-click="getPizzaCat('SANS VIANDE')"ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categoriePizzas == 'SANS VIANDE']">
             Sans Viande
           </button>
-          <button class="col-20 button button-stable">
-            Toutes
+          <button ng-click="getPizzaTop(10)"ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categoriePizzas == 'Top']">
+            Top 10
           </button>
         </div>
         <ion-scroll direction="y" class="available-scroller" style="width: 100%; height: 70vh">
@@ -88,7 +88,7 @@
           Appeler le serveur
         </button>
         <div id="bottomButtonDiv" class="row">
-          <button ui-sref="boissons" class="col-25 button button-stable bottomButton">
+          <button ng-click="goToBoissons()" class="col-25 button button-stable bottomButton">
             Passer aux boissons
           </button>
         </div>
