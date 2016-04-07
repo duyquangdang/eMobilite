@@ -155,9 +155,6 @@ angular.module('starter.controllers', [])
       });
     };
 
-    /*******************/
-    /*   SQL REQUETES  */
-    /*******************/
     //Get All Pizzas
     $scope.getPizzaAll = function()
     {
@@ -265,7 +262,9 @@ angular.module('starter.controllers', [])
           }
       );
     }
-
+    /*******************/
+    /*   SQL REQUETES  */
+    /*******************/
     //Get all pizzas by default
     $cordovaSQLite.execute(db, 'SELECT * FROM pizzas_mkd')
       .then(
@@ -541,6 +540,66 @@ angular.module('starter.controllers', [])
       $state.go('desserts', {tableID: $scope.tableID, tableNum: $scope.tableNum});
     };
 
+    //Get All Boissons
+    $scope.getBoissonsAll = function()
+    {
+      $cordovaSQLite.execute(db, 'SELECT * FROM boissons')
+        .then(
+
+          // On succes
+          function(res)
+          {
+            $scope.boissons = new Array();
+            for (i=0; i < res.rows.length; i++)
+            {
+              $scope.boissons.push({
+                "id":res.rows.item(i).BOISS_ID
+                ,"name":res.rows.item(i).BOISS_NAME
+                ,"img":res.rows.item(i).BOISS_IMG
+                ,"categorie":res.rows.item(i).BOISS_CAT
+              });
+            }
+
+            $scope.categorieBoissons = "All";
+          },
+
+          // On error
+          function(error) {
+            $scope.statusMessage = "Error on loading: " + error.message;
+          }
+      );
+    }
+
+    //Get boissons by categories
+    $scope.getBoissonsCat = function(categorie)
+    {
+      $cordovaSQLite.execute(db, 'SELECT * FROM boissons WHERE BOISS_CAT = (?)', [categorie])
+        .then(
+
+          // On succes
+          function(res)
+          {
+            $scope.boissons = new Array();
+            for (i=0; i < res.rows.length; i++)
+            {
+              $scope.boissons.push({
+                "id":res.rows.item(i).BOISS_ID
+                ,"name":res.rows.item(i).BOISS_NAME
+                ,"img":res.rows.item(i).BOISS_IMG
+                ,"categorie":res.rows.item(i).BOISS_CAT
+              });
+            }
+
+            $scope.categorieBoissons = categorie;
+          },
+
+          // On error
+          function(error) {
+            $scope.statusMessage = "Error on loading: " + error.message;
+          }
+      );
+    }
+
     $scope.call = function() {
       var confirmPopup = $ionicPopup.confirm({
         title: 'Appeler le serveur',
@@ -576,6 +635,8 @@ angular.module('starter.controllers', [])
               ,"categorie":res.rows.item(i).BOISS_CAT
             });
           }
+
+          $scope.categorieBoissons = "All";
         },
 
         // On error
@@ -606,6 +667,66 @@ angular.module('starter.controllers', [])
     $scope.goToBoissons = function(){
       $state.go('boissons', {tableID: $scope.tableID, tableNum: $scope.tableNum});
     };
+
+    //Get All Boissons
+    $scope.getDessertsAll = function()
+    {
+      $cordovaSQLite.execute(db, 'SELECT * FROM desserts')
+        .then(
+
+          // On succes
+          function(res)
+          {
+            $scope.desserts = new Array();
+            for (i=0; i < res.rows.length; i++)
+            {
+              $scope.desserts.push({
+                "id":res.rows.item(i).DESS_ID
+                ,"name":res.rows.item(i).DESS_NAME
+                ,"img":res.rows.item(i).DESS_IMG
+                ,"categorie":res.rows.item(i).DESS_CAT
+              });
+            }
+
+            $scope.categorieDesserts = "All";
+          },
+
+          // On error
+          function(error) {
+            $scope.statusMessage = "Error on loading: " + error.message;
+          }
+      );
+    }
+
+    //Get boissons by categories
+    $scope.getDessertCat = function(categorie)
+    {
+      $cordovaSQLite.execute(db, 'SELECT * FROM desserts WHERE DESS_CAT = (?)', [categorie])
+        .then(
+
+          // On succes
+          function(res)
+          {
+            $scope.desserts = new Array();
+            for (i=0; i < res.rows.length; i++)
+            {
+              $scope.desserts.push({
+                "id":res.rows.item(i).DESS_ID
+                ,"name":res.rows.item(i).DESS_NAME
+                ,"img":res.rows.item(i).DESS_IMG
+                ,"categorie":res.rows.item(i).DESS_CAT
+              });
+            }
+
+            $scope.categorieDesserts = categorie;
+          },
+
+          // On error
+          function(error) {
+            $scope.statusMessage = "Error on loading: " + error.message;
+          }
+      );
+    }
 
     $scope.call = function() {
       var confirmPopup = $ionicPopup.confirm({
@@ -641,6 +762,8 @@ angular.module('starter.controllers', [])
               ,"categorie":res.rows.item(i).DESS_CAT
             });
           }
+
+          $scope.categorieDesserts = "All";
         },
 
         // On error
@@ -875,7 +998,7 @@ angular.module('starter.controllers', [])
       });
     };
 
-    
+
     /*******************/
     /*   SQL REQUETES  */
     /*******************/

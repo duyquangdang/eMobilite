@@ -23,17 +23,17 @@
 			</div>
 			<hr>
 			<div class="row list list-inline">
-				<button ng-click="getDessertCat('Glace')" ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categoriePizzas == 'Glace']">
-					Les glaces
+				<button ng-click="getDessertsAll()" ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categorieDesserts == 'All']">
+					Tous
 				</button>
-				<button ng-click="getDessertCat('Tarte')" ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categoriePizzas == 'Tarte']">
+				<button ng-click="getDessertCat('tarte')" ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categorieDesserts == 'tarte']">
 					Les tartes
 				</button>
-				<button ng-click="getDessertCat('Gateaux')" ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categoriePizzas == 'Gateaux']">
+				<button ng-click="getDessertCat('gateau')" ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categorieDesserts == 'gateau']">
 					Les gâteaux
 				</button>
-				<button ng-click="getDessertAll()" ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categoriePizzas == 'All']">
-					Tous
+				<button ng-click="getDessertCat('glace')" ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categorieDesserts == 'glace']">
+					Les glaces
 				</button>
 			</div>
 			<ion-scroll direction="y" class="available-scroller" style="width: 100%; height: 70vh">

@@ -23,17 +23,17 @@
         </div>
         <hr>
         <div class="row list list-inline">
-          <button class="col-25 button button-assertive">
+          <button ng-click="getBoissonsAll()" ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categorieBoissons == 'All']">
+            Toutes
+          </button>
+          <button ng-click="getBoissonsCat('froid')" ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categorieBoissons == 'froid']">
             Boissons froides
           </button>
-          <button class="col-25 button button-stable">
+          <button ng-click="getBoissonsCat('chaud')" ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categorieBoissons == 'chaud']">
             Boissons chaudes
           </button>
-          <button class="col-25 button button-stable">
+          <button ng-click="getBoissonsCat('alcool')" ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categorieBoissons == 'alcool']">
             Alcools
-          </button>
-          <button class="col-25 button button-stable">
-            Toutes
           </button>
         </div>
         <div class="boissons" collection-repeat="boisson in boissons" item-height="25%" item-width="25%">
