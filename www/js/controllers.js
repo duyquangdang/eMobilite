@@ -468,6 +468,7 @@ angular.module('starter.controllers', [])
                     ,"name":res.rows.item(i).ING_NOM
                     ,"prix":res.rows.item(i).ING_PRIX
                     ,"categorie":res.rows.item(i).ING_CATEGORIE
+                    ,"time":res.rows.item(i).ING_TIME
                   });
                 }
 
@@ -495,7 +496,7 @@ angular.module('starter.controllers', [])
                 }
                 while($scope.pizza.ingredients.length != 5)
                 {
-                  $scope.pizza.ingredients.push({categorie:"", id:"", name:"", prix:""});
+                  $scope.pizza.ingredients.push({id:"", name:"", prix:0, categorie:"", time:0});
                 }
                 
               },
