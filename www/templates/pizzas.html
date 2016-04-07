@@ -80,7 +80,7 @@
         </div>
         <ion-scroll direction="y" class="available-scroller" style="width: 100%; height: 70vh">
           <div class="pizza" collection-repeat="pizza in pizzasMkd" item-height="25%" item-width="25%">
-            <img ng-src="img/pizzas/{{pizza.img}}" ng-click="getPizza(pizza.id)">
+            <img ng-src="img/pizzas/{{pizza.img}}" ng-click="goToPizzasCustom(pizza.id)">
             <h4>{{pizza.name}}</h4>
           </div>
         </ion-scroll>

@@ -23,16 +23,16 @@
 			</div>
 			<hr>
 			<div class="row list list-inline">
-				<button class="col-25 button button-assertive">
+				<button ng-click="getDessertCat('Glace')" ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categoriePizzas == 'Glace']">
 					Les glaces
 				</button>
-				<button class="col-25 button button-stable">
+				<button ng-click="getDessertCat('Tarte')" ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categoriePizzas == 'Tarte']">
 					Les tartes
 				</button>
-				<button class="col-25 button button-stable">
+				<button ng-click="getDessertCat('Gateaux')" ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categoriePizzas == 'Gateaux']">
 					Les gâteaux
 				</button>
-				<button class="col-25 button button-stable">
+				<button ng-click="getDessertAll()" ng-class="{true: 'col-20 button button-assertive', false: 'col-20 button button-stable'}[categoriePizzas == 'All']">
 					Tous
 				</button>
 			</div>
